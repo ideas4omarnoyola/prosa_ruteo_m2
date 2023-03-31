@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 17</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+    <script src="../js/librerias/jquery-ui.min.js"></script>
+    <script src="../js/librerias/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <script src="../js/movimientosRobot.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<body class="pagina">
+
+    <img class="elementos" id="texto" src="../img/pagina17/texto.png" data-posX="0" data-posY="0">
+
+    <img class="elementos drops" id="drop" data-lugar="1" src="../img/pagina17/drop.png" data-posX="118" data-posY="235" alt="">
+    <img class="elementos" id="c1"src="../img/pagina17/c1.png" data-posX="214" data-posY="447" alt="">
+    <img class="elementos" id="c2"src="../img/pagina17/c2.png" data-posX="270" data-posY="447" alt="">
+    <img class="elementos" id="c3"src="../img/pagina17/c3.png" data-posX="322" data-posY="447" alt="">
+    <img class="elementos" id="c4"src="../img/pagina17/c4.png" data-posX="375" data-posY="447" alt="">
+    <img class="elementos" id="respuesta" src="../img/pagina17/respuesta.png" data-posX="0" data-posY="0" alt="">
+
+    <img class="elementos" id="retroMala" src="../img/pagina17/retroMala.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="retroBuena" src="../img/pagina17/retroBuena.png" data-posX="0" data-posY="0">
+
+    <img class="elementos drags" id="drag1" data-lugar="1" src="../img/pagina17/drag1.png" data-posX="563" data-posY="363" alt="">
+    <img class="elementos drags" id="drag2" data-lugar="2" src="../img/pagina17/drag2.png" data-posX="611" data-posY="363" alt="">
+    <img class="elementos drags" id="drag3" data-lugar="3" src="../img/pagina17/drag3.png" data-posX="653" data-posY="363" alt="">
+    <img class="elementos drags" id="drag4" data-lugar="4" src="../img/pagina17/drag4.png" data-posX="699" data-posY="363" alt="">
+    <img class="elementos drags" id="drag5" data-lugar="5" src="../img/pagina17/drag5.png" data-posX="745" data-posY="363" alt="">
+    <img class="elementos drags" id="drag6" data-lugar="6" src="../img/pagina17/drag6.png" data-posX="788" data-posY="363" alt="">
+    <img class="elementos drags" id="drag7" data-lugar="7" src="../img/pagina17/drag7.png" data-posX="829" data-posY="363" alt="">
+    <img class="elementos drags" id="drag8" data-lugar="8" src="../img/pagina17/drag8.png" data-posX="880" data-posY="363" alt="">
+    <img class="elementos drags" id="drag9" data-lugar="9" src="../img/pagina17/drag9.png" data-posX="929" data-posY="363" alt="">
+    <img class="elementos drags" id="drag10" data-lugar="10" src="../img/pagina17/drag10.png" data-posX="550" data-posY="415" alt="">
+    <img class="elementos drags" id="drag11" data-lugar="11" src="../img/pagina17/drag11.png" data-posX="593" data-posY="415" alt="">
+    <img class="elementos drags" id="drag12" data-lugar="12" src="../img/pagina17/drag12.png" data-posX="640" data-posY="415" alt="">
+    <img class="elementos drags" id="drag13" data-lugar="13" src="../img/pagina17/drag13.png" data-posX="679" data-posY="415" alt="">
+    <img class="elementos drags" id="drag14" data-lugar="14" src="../img/pagina17/drag14.png" data-posX="734" data-posY="415" alt="">
+    <img class="elementos drags" id="drag15" data-lugar="15" src="../img/pagina17/drag15.png" data-posX="781" data-posY="415" alt="">
+    <img class="elementos drags" id="drag16" data-lugar="16" src="../img/pagina17/drag16.png" data-posX="831" data-posY="415" alt="">
+    <img class="elementos drags" id="drag17" data-lugar="17" src="../img/pagina17/drag17.png" data-posX="870" data-posY="415" alt="">
+    <img class="elementos drags" id="drag18" data-lugar="18" src="../img/pagina17/drag18.png" data-posX="919" data-posY="415" alt="">
+    <img class="elementos drags" id="drag19" data-lugar="19" src="../img/pagina17/drag19.png" data-posX="565" data-posY="468" alt="">
+    <img class="elementos drags" id="drag20" data-lugar="20" src="../img/pagina17/drag20.png" data-posX="610" data-posY="468" alt="">
+    <img class="elementos drags" id="drag21" data-lugar="21" src="../img/pagina17/drag21.png" data-posX="656" data-posY="468" alt="">
+    <img class="elementos drags" id="drag22" data-lugar="22" src="../img/pagina17/drag22.png" data-posX="704" data-posY="468" alt="">
+    <img class="elementos drags" id="drag23" data-lugar="23" src="../img/pagina17/drag23.png" data-posX="756" data-posY="468" alt="">
+    <img class="elementos drags" id="drag24" data-lugar="24" src="../img/pagina17/drag24.png" data-posX="811" data-posY="468" alt="">
+    <img class="elementos drags" id="drag25" data-lugar="25" src="../img/pagina17/drag25.png" data-posX="857" data-posY="468" alt="">
+    <img class="elementos drags" id="drag26" data-lugar="26" src="../img/pagina17/drag26.png" data-posX="904" data-posY="468" alt="">
+    
+    
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+        const texto = $('#texto');
+        const retroBuena = $('#retroBuena');
+        const retroMala = $('#retroMala');
+        const c1 = $('#c1');
+        const c2 = $('#c2');
+        const c3 = $('#c3');
+        const c4 = $('#c4');
+        const respuesta = $('#respuesta');
+
+        const drags = $('.drags');
+        const drops = $('.drops');
+
+        const drop = $('#drop');
+
+        let dragSelect;
+        let dropSelect;
+        let colocados = 0;
+        let aciertos = 0;
+
+        drags.css('cursor', 'grab');
+
+        let delay = .5;
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/PROSA_INT_RUTEO_M2_15_04.mp3')
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            aplicacion.reproducirAudio(audio[0], completarDefinicion, 1);
+            animacionEntrada(texto, 'default', 1);
+            animacionEntrada(drop, 'default', 1);
+
+            drags.each(function(){
+                delay = delay + .3;
+                animacionEntrada($(this), 'default', 1, delay);
+            });
+        }
+
+        function completarDefinicion(){
+
+            drags.draggable({
+                revert: true,
+                start: function( event, ui ) {
+                    dragSelect = $(this).data('lugar');
+                    $(this).css('cursor', 'grabbing');
+                },             
+                stop: function( event, ui ) {
+                    $(this).css('cursor', 'grab');
+                }             
+            });
+
+            drops.droppable({
+                accept: drags,
+                tolerance: "intersect",
+                drop: function( event, ui ) {
+                    dropSelect = $(this).data('lugar');
+                    soltar();
+                }
+            });
+        }
+
+        function soltar(){
+            // Selecionar los elementos correspondiente
+            const dragActivo = $(`#drag${dragSelect}`);
+
+            if(dragSelect == '2'){
+                animacionEntrada(c1, 'default', 1);
+                animacionSalida(dragActivo, 'default', 1);
+                aciertos++;
+            }
+
+            if(dragSelect == '1'){
+                animacionEntrada(c2, 'default', 1);
+                animacionSalida(dragActivo, 'default', 1);
+                aciertos++;
+            }
+
+            if(dragSelect == '3'){
+                animacionEntrada(c3, 'default', 1);
+                animacionSalida(dragActivo, 'default', 1);
+                aciertos++;
+            }
+
+            if(dragSelect == '11'){
+                animacionEntrada(c4, 'default', 1);
+                animacionSalida(dragActivo, 'default', 1);
+                aciertos++;
+            }
+
+            colocados++;
+
+            if(aciertos == 4){
+                animacionEntrada(retroBuena, 'default', 1);
+                animacionEntrada(respuesta, 'default', 1);
+            }
+
+            if(colocados == 4){
+                animacionEntrada(retroMala, 'default', 1);
+            }   
+        }
+
+    </script>
+</body>
+</html>
