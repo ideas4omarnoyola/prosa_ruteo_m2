@@ -385,8 +385,8 @@
     <img class="elementos" id="instrucciones" src="../img/pagina06/instrucciones.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="play" src="../img/pagina06/play.png" data-posX="540" data-posY="278"/>
 
-    <video class="elementos" id="video1" data-posX="0" data-posY="70"  autobuffer controls controlsList="nodownload nofullscreen">
-        <source src="../videos/video1.mp4" type="video/mp4" />
+    <video class="elementos" id="video1" data-posX="0" data-posY="100"  autobuffer controls controlsList="nodownload nofullscreen">
+        <source src="../videos/SR_M2_V1.mp4" type="video/mp4" />
     </video>
 
     
@@ -446,7 +446,8 @@
 
         play.click(function(){
             if(play.css('cursor') == 'pointer'){
-                animacionSalida(texto, 'default', 1, 1);
+                animacionSalida(robot, 'default', 1, 1);
+                animacionSalida(instrucciones, 'default', 1, 1);
                 animacionEntrada(video1, 'default', 1, 1);
 
                 setTimeout(()=>{
