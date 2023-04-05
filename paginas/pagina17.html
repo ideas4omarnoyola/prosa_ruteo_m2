@@ -166,7 +166,9 @@
                 aciertos++;
             }
 
-            colocados++;
+            if(dragSelect != '2' && dragSelect != '1' && dragSelect != '3' && dragSelect != '11'){
+                colocados++;
+            }
 
             if(aciertos == 4){
                 animacionEntrada(retroBuena, 'default', 1);
@@ -175,6 +177,11 @@
 
             if(colocados == 4){
                 animacionEntrada(retroMala, 'default', 1);
+                colocados = 0;
+
+                setTimeout(() => {
+                    animacionSalida(retroMala, 'default', 1);
+                }, 3000);
             }   
         }
 

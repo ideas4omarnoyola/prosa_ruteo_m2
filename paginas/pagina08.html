@@ -509,8 +509,9 @@
 
         function siguiente(){
             indexInfo++;
+            animacionSalida(informacion[indexInfo - 1], 'default', 1);
+            
             if(indexInfo < informacion.length){
-                animacionSalida(informacion[indexInfo], 'default', 1);
                 locutarDialogo();
             }
             else{

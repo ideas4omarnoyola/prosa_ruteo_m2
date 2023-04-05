@@ -386,6 +386,7 @@
     <img class="elementos" id="instrucciones" src="../img/pagina13/instrucciones.png" data-posX="0" data-posY="0" alt="">
     <img class="elementos" id="d1" src="../img/pagina13/d1.png" data-posX="0" data-posY="0" alt="">
 
+    <img class="elementos" id="mano" src="../img/pagina13/mano.png" data-posX="0" data-posY="0" alt="">
     <img class="elementos" id="boton" src="../img/pagina13/boton.png" data-posX="797" data-posY="190" alt="">
     <img class="elementos" id="pop" src="../img/pagina13/pop.png" data-posX="0" data-posY="0" alt="">
 
@@ -408,6 +409,7 @@
         const d1 = $('#d1');
         const instrucciones = $('#instrucciones');
         const boton = $('#boton');
+        const mano = $('#mano');
         const pop = $('#pop');
         const boton1 = $('#boton1');
         const info1 = $('#info1');
@@ -445,7 +447,6 @@
             aplicacion.reproducirAudio(audio[0], dialogo, 1);
             animacionEntrada(texto, 'default', 1, 1);
             animacionEntrada(robot, 'default', 1, 1);
-            animacionEntrada(boton, 'default', 1, 1);
             
             setTimeout(()=>{
                 flotar(robot, 'i');
@@ -454,7 +455,7 @@
         }
 
         function dialogo(){
-            aplicacion.reproducirAudio(audio[1], actiovarPop, 1);
+            aplicacion.reproducirAudio(audio[1], activarPop, 1);
             animacionEntrada(d1, 'derecha-izquierda', 1, 1);
             animacionEntrada(instrucciones, 'derecha-izquierda', 1, 7);
 
@@ -464,14 +465,17 @@
             }, 1000);
         }
 
-        function actiovarPop(){
+        function activarPop(){
             pausarHablar();
+            animacionEntrada(mano, 'default', 1);
             parpadear(boton);
         }
 
         boton.click(function(){
             animacionEntrada(pop, 'abajo-arriba', 1);
-            dejarParpadear(boton);
+            animacionEntrada(boton1, 'abajo-arriba', 1);
+            animacionSalida(mano, 'default', 1);
+            animacionSalida(boton, 'default', 1);
             mostrarInfo();
         });
 
@@ -502,6 +506,9 @@
             if(indexInfo < informacion.length){
                 pausarHablar();
                 parpadear(boton1);
+                boton1.css({
+                  filter: 'saturate(300%)'
+                });
             }
             else{
                 pararHablar();

@@ -446,7 +446,7 @@
             width: '280px',
             height: '40px',
             outline: 'none',
-            fontSize: '32px'
+            fontSize: '24px'
         });
 
         boton.css('cursor', 'pointer');
@@ -500,20 +500,8 @@
             animacionEntrada(d2, 'derecha-izquierda', 1, 1);
             animacionEntrada(inputCodigo, 'default', 1, 1);            
             animacionEntrada(puertaA, 'default', 1, 1);            
+            animacionEntrada(boton, 'default', 1, 1);            
             animacionSalida(zona, 'default', 1, 1);
-            
-            verificarCodigo();
-        }
-
-        function verificarCodigo(){
-
-            inputCodigo.on('input', function(){
-
-                if($(this).val().length == 8){
-                    animacionEntrada(boton, 'default', 1);   
-                }
-
-            });
         }
 
         boton.click(function(){
