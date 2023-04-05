@@ -570,8 +570,10 @@
         });
 
         function regrearInsertar(){
-            animacionSalida(codigo, 'default', 1);
-            insertarCodigo();
+            animacionSalida(codigo, 'default', 1, 4);
+            setTimeout(()=>{
+              insertarCodigo();
+            }, 5000);
         }
 
         function siguienteIntento(){
